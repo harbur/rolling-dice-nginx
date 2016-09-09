@@ -1,10 +1,10 @@
 #!/bin/sh
 
-echo $(hostname) > /usr/share/nginx/html/index.html
-
-# Our Application takes 10secs to start
+# Roll a 20-sided dice
 number=$RANDOM
 let number%=20
+
+echo "$(hostname) [$number/20]" > /usr/share/nginx/html/index.html
 
 # This should be the correct way to launch nginx
 #exec nginx -g 'daemon off;'

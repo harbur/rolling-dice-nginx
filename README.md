@@ -12,7 +12,7 @@ The rules are the following:
 
 The RDN is used in order to help better understand how health checks works. It simulates an application that may or may-not fail during startup.
 In order to avoid having the container exit-on-failure, the startup is _wrongly_ designed to launch nginx on the background and tail the access logs.
-If the nginx is launched correctly it is exposed on port `80` and outputs the `hostname` on a request.
+If the nginx is launched correctly it is exposed on port `80` and outputs the `hostname` and the dice number on a GET `/` request.
 
 # Versions
 
